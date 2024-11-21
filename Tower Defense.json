@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 217,
+    "build": 218,
     "major": 5,
     "minor": 4,
     "revision": 0
@@ -559,6 +559,11 @@
       "value": 200
     },
     {
+      "name": "Gems",
+      "type": "number",
+      "value": 0
+    },
+    {
       "name": "Health",
       "type": "number",
       "value": 100
@@ -567,6 +572,28 @@
       "name": "Round",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "Towers",
+      "type": "array",
+      "children": [
+        {
+          "type": "string",
+          "value": "Pirate"
+        },
+        {
+          "type": "string",
+          "value": "Musketeer"
+        },
+        {
+          "type": "string",
+          "value": "Cannon"
+        },
+        {
+          "type": "string",
+          "value": "Blunderbuss"
+        }
+      ]
     }
   ],
   "layouts": [
@@ -590,7 +617,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6897782140104534,
+        "zoomFactor": 0.7130377630690437,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1797,6 +1824,39 @@
           "x": 17,
           "y": 10,
           "zOrder": 49,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 36,
+          "keepRatio": true,
+          "layer": "",
+          "name": "GemsText",
+          "persistentUuid": "93c0db76-af6e-4391-b553-0af96a116793",
+          "width": 95,
+          "x": 5,
+          "y": 83,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "GemsAmount",
+          "persistentUuid": "89b5c0c7-d269-4280-ad73-315994490939",
+          "width": 0,
+          "x": 85,
+          "y": 80,
+          "zOrder": 51,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4786,7 +4846,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Canon\n225",
+          "string": "Cannon\n225",
           "font": "",
           "textAlignment": "center",
           "characterSize": 20,
@@ -4809,7 +4869,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Canon\n225",
+            "text": "Cannon\n225",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "bottom",
@@ -4930,6 +4990,90 @@
               "width": 256
             }
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "GemsText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Gems:",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 24,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Gems:",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "characterSize": 24,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "GemsAmount",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "---",
+          "font": "",
+          "textAlignment": "right",
+          "characterSize": 30,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "---",
+            "font": "",
+            "textAlignment": "right",
+            "verticalTextAlignment": "center",
+            "characterSize": 30,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4990,7 +5134,13 @@
             "objectName": "HealthAmount"
           },
           {
+            "objectName": "GemsAmount"
+          },
+          {
             "objectName": "RoundText"
+          },
+          {
+            "objectName": "GemsText"
           },
           {
             "objectName": "RoundAmount"
@@ -5202,6 +5352,17 @@
                     "MouseX()",
                     "=",
                     "MouseY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "GemsAmount",
+                    "Text",
+                    "=",
+                    "Gems"
                   ]
                 }
               ]
@@ -5579,6 +5740,87 @@
                     "Text",
                     "=",
                     "Round"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                          },
+                          "parameters": [
+                            "NextWaveButton",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "KeyReleased"
+                          },
+                          "parameters": [
+                            "",
+                            "Space"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Round",
+                            "=",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Round",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Gems",
+                    "+",
+                    "((Round - 1) * 5) + 20"
                   ]
                 }
               ]
@@ -8417,9 +8659,57 @@
           "name": "TreasureChest",
           "persistentUuid": "2f1cf383-f516-49a1-95cb-e3e707532e82",
           "width": 421,
-          "x": 446,
-          "y": 178,
+          "x": 450,
+          "y": 200,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "GemRequirementText",
+          "persistentUuid": "b5b9d63a-87ac-4fa0-8c4f-a9e0571a5a9b",
+          "width": 0,
+          "x": 400,
+          "y": 200,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "CurrentGemsText",
+          "persistentUuid": "605af001-5381-4ba3-a24e-bf6d044991b4",
+          "width": 0,
+          "x": 420,
+          "y": 573,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewTowerText",
+          "persistentUuid": "153dab3b-6fee-4a52-bb6f-79bd81910734",
+          "width": 0,
+          "x": 420,
+          "y": 663,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8430,14 +8720,14 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "NewText",
+          "name": "GemRequirementText",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Gacha Bitch!!!",
+          "string": "Gems Needed: 100",
           "font": "",
           "textAlignment": "center",
           "characterSize": 60,
@@ -8460,7 +8750,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Gacha Bitch!!!",
+            "text": "Gems Needed: 100",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "center",
@@ -8667,13 +8957,103 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "CurrentGemsText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Current Gems:",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Current Gems:",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 60,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewTowerText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 60,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "NewText"
+            "objectName": "GemRequirementText"
+          },
+          {
+            "objectName": "CurrentGemsText"
+          },
+          {
+            "objectName": "NewTowerText"
           },
           {
             "objectName": "BlueButton"
@@ -8706,6 +9086,149 @@
                 "",
                 "\"TestScene\"",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "TreasureChest",
+                "Animation",
+                "=",
+                "\"Closed\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            },
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "TreasureChest",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gems",
+                ">=",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "TreasureChest",
+                "Animation",
+                "=",
+                "\"Closed\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "TreasureChest",
+                "Animation",
+                "=",
+                "\"Open\""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gems",
+                "-",
+                "100"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "NewTowerText",
+                "Text",
+                "=",
+                "\"You Got: \" + Towers[RandomInRange(0,GlobalVariableChildCount(Towers) - 1)]"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CurrentGemsText",
+                "Text",
+                "=",
+                "\"Current Gems: \" + Gems"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "NewTowerText",
+                "=",
+                "420"
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreX"
+              },
+              "parameters": [
+                "CurrentGemsText",
+                "=",
+                "420"
               ]
             }
           ]
