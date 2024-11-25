@@ -666,7 +666,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.511778403521025,
+        "zoomFactor": 0.43357743047024383,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -1866,7 +1866,7 @@
           "depth": 48,
           "height": 55,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "BlueButton2",
           "persistentUuid": "dcd3ce80-d605-4a78-a542-af909d53621b",
           "width": 106,
@@ -1883,7 +1883,7 @@
           "depth": 1,
           "height": 36,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "GemsText",
           "persistentUuid": "93c0db76-af6e-4391-b553-0af96a116793",
           "width": 95,
@@ -1899,7 +1899,7 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "GemsAmount",
           "persistentUuid": "89b5c0c7-d269-4280-ad73-315994490939",
           "width": 0,
@@ -1959,7 +1959,7 @@
           "depth": 0,
           "height": 210,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "3b3e37bc-8401-4574-9db0-f3b146a8cf44",
           "width": 180,
@@ -1981,7 +1981,7 @@
           "depth": 0,
           "height": 180,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "a38bedf1-ee69-4e19-a0d5-07133e96230b",
           "width": 180,
@@ -2003,7 +2003,7 @@
           "depth": 0,
           "height": 180,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "29144fa7-5863-4f30-9af2-b962cd6db33e",
           "width": 180,
@@ -2025,7 +2025,7 @@
           "depth": 0,
           "height": 210,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "9abba698-cf79-4b6e-ba59-1d647f1d4973",
           "width": 180,
@@ -2047,7 +2047,7 @@
           "depth": 0,
           "height": 210,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "e4bec294-d489-4da2-860e-893bd5b7b275",
           "width": 180,
@@ -2069,7 +2069,7 @@
           "depth": 1,
           "height": 73,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "6d85753d-ef83-45ed-8c60-b0a804d8579f",
           "width": 68,
@@ -2091,7 +2091,7 @@
           "depth": 0,
           "height": 720,
           "keepRatio": true,
-          "layer": "",
+          "layer": "Layer",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "2a3cf6b2-5141-481c-9ba5-4e51498bece1",
           "width": 900,
@@ -8903,6 +8903,39 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Layer",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
