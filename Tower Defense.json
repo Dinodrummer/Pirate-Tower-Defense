@@ -592,6 +592,85 @@
         "name": "Cowboys_and_Pirates_V2_Tilemap-Sheet.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/GrayBlunderbuss.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/GrayBlunderbuss.png\",\"extension\":\".png\"}",
+        "name": "assets/GrayBlunderbuss.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite37.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite37.png\"}",
+        "name": "NewSprite",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/GrayMusket.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/GrayMusket.png\",\"extension\":\".png\"}",
+        "name": "assets/GrayMusket.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "21. Pirate Seas (First Wave).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "21. Pirate Seas (First Wave).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Krampus's Workshop.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "ae374e194e1d0ce48ef6a53f0047e36e19ad68f69fc94712019a81cf4cee0657_Krampus's Workshop.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Music/Comedy/ae374e194e1d0ce48ef6a53f0047e36e19ad68f69fc94712019a81cf4cee0657_Krampus's Workshop.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "07. Howdy!.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "07. Howdy!.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite38.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewTiledSprite3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewTiledSprite3",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -643,6 +722,31 @@
           "value": "Blunderbuss"
         }
       ]
+    },
+    {
+      "name": "Save_AllObjects",
+      "type": "array",
+      "children": []
+    },
+    {
+      "name": "CanonOn",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "MusketOn",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "BlunderOn",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "SpawningTime",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -666,10 +770,28 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.43357743047024383,
+        "zoomFactor": 0.23089183385225265,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "AllObjects",
+          "objects": [
+            {
+              "name": "Pirate"
+            },
+            {
+              "name": "Musketeer"
+            },
+            {
+              "name": "Canon"
+            },
+            {
+              "name": "BlunderBuss"
+            }
+          ]
+        }
+      ],
       "variables": [
         {
           "name": "Queue",
@@ -682,7 +804,203 @@
           "children": [
             {
               "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 35
+            },
+            {
+              "type": "number",
               "value": 15
+            },
+            {
+              "type": "number",
+              "value": 25
+            },
+            {
+              "type": "number",
+              "value": 30
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 25
+            },
+            {
+              "type": "number",
+              "value": 30
+            },
+            {
+              "type": "number",
+              "value": 30
+            },
+            {
+              "type": "number",
+              "value": 100
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 55
+            },
+            {
+              "type": "number",
+              "value": 35
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 45
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 80
+            },
+            {
+              "type": "number",
+              "value": 30
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 35
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 200
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 50
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 45
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 150
+            },
+            {
+              "type": "number",
+              "value": 80
+            },
+            {
+              "type": "number",
+              "value": 140
+            },
+            {
+              "type": "number",
+              "value": 25
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 35
+            },
+            {
+              "type": "number",
+              "value": 1
+            },
+            {
+              "type": "number",
+              "value": 180
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 50
+            },
+            {
+              "type": "number",
+              "value": 150
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 12
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 100
+            },
+            {
+              "type": "number",
+              "value": 2
             },
             {
               "type": "number",
@@ -694,7 +1012,127 @@
             },
             {
               "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 35
+            },
+            {
+              "type": "number",
+              "value": 45
+            },
+            {
+              "type": "number",
               "value": 40
+            },
+            {
+              "type": "number",
+              "value": 4
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 100
+            },
+            {
+              "type": "number",
+              "value": 1
+            },
+            {
+              "type": "number",
+              "value": 150
+            },
+            {
+              "type": "number",
+              "value": 7
+            },
+            {
+              "type": "number",
+              "value": 100
+            },
+            {
+              "type": "number",
+              "value": 9
+            },
+            {
+              "type": "number",
+              "value": 2
+            },
+            {
+              "type": "number",
+              "value": 11
+            },
+            {
+              "type": "number",
+              "value": 8
+            },
+            {
+              "type": "number",
+              "value": 2
+            },
+            {
+              "type": "number",
+              "value": 69
+            },
+            {
+              "type": "number",
+              "value": 200
+            },
+            {
+              "type": "number",
+              "value": 80
+            },
+            {
+              "type": "number",
+              "value": 3
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 150
+            },
+            {
+              "type": "number",
+              "value": 7
+            },
+            {
+              "type": "number",
+              "value": 60
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 300
+            },
+            {
+              "type": "number",
+              "value": 500
+            },
+            {
+              "type": "number",
+              "value": 1
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 30
             },
             {
               "type": "number",
@@ -702,13 +1140,74 @@
             },
             {
               "type": "number",
-              "value": 75
+              "value": 2
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 4
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 15
+            },
+            {
+              "type": "number",
+              "value": 1000
+            },
+            {
+              "type": "number",
+              "value": 20
+            },
+            {
+              "type": "number",
+              "value": 5
+            },
+            {
+              "type": "number",
+              "value": 10
+            },
+            {
+              "type": "number",
+              "value": 6
+            },
+            {
+              "type": "number",
+              "value": 500
+            },
+            {
+              "type": "number",
+              "value": 30
+            },
+            {
+              "type": "number",
+              "value": 2
+            },
+            {
+              "type": "number",
+              "value": 8
             },
             {
               "type": "number",
               "value": 100
+            },
+            {
+              "type": "number",
+              "value": 1
             }
           ]
+        },
+        {
+          "name": "ClimbVariable",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -1736,7 +2235,7 @@
           "width": 150,
           "x": 1130,
           "y": 369,
-          "zOrder": 41,
+          "zOrder": 61,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1765,6 +2264,7 @@
           "keepRatio": true,
           "layer": "",
           "name": "Blunderbuss_Button",
+          "opacity": 0,
           "persistentUuid": "94a16717-f15e-47a4-b4a1-bf6069146ff9",
           "width": 0,
           "x": 1130,
@@ -1785,7 +2285,7 @@
           "width": 150,
           "x": 1130,
           "y": 530,
-          "zOrder": 44,
+          "zOrder": 63,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1797,6 +2297,7 @@
           "keepRatio": true,
           "layer": "",
           "name": "Canon_Button",
+          "opacity": 0,
           "persistentUuid": "b030ad7c-9733-4a69-8104-b312dcb7dc62",
           "width": 0,
           "x": 926,
@@ -1817,7 +2318,7 @@
           "width": 150,
           "x": 926,
           "y": 530,
-          "zOrder": 46,
+          "zOrder": 62,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1959,7 +2460,7 @@
           "depth": 0,
           "height": 210,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "3b3e37bc-8401-4574-9db0-f3b146a8cf44",
           "width": 180,
@@ -1981,7 +2482,7 @@
           "depth": 0,
           "height": 180,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "a38bedf1-ee69-4e19-a0d5-07133e96230b",
           "width": 180,
@@ -2003,7 +2504,7 @@
           "depth": 0,
           "height": 180,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "29144fa7-5863-4f30-9af2-b962cd6db33e",
           "width": 180,
@@ -2025,7 +2526,7 @@
           "depth": 0,
           "height": 210,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "9abba698-cf79-4b6e-ba59-1d647f1d4973",
           "width": 180,
@@ -2047,7 +2548,7 @@
           "depth": 0,
           "height": 210,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "e4bec294-d489-4da2-860e-893bd5b7b275",
           "width": 180,
@@ -2069,7 +2570,7 @@
           "depth": 1,
           "height": 73,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "6d85753d-ef83-45ed-8c60-b0a804d8579f",
           "width": 68,
@@ -2091,7 +2592,7 @@
           "depth": 0,
           "height": 720,
           "keepRatio": true,
-          "layer": "Layer",
+          "layer": "Trees and shit",
           "name": "Pirate_Tilemap_Base",
           "persistentUuid": "2a3cf6b2-5141-481c-9ba5-4e51498bece1",
           "width": 900,
@@ -2105,6 +2606,142 @@
               "value": "{\"tileWidth\":8,\"tileHeight\":8,\"dimX\":45,\"dimY\":36,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2076,2077,2078,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2244,2245,2246,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1830,1831,1832,-1,-1,-1,-1,-1,-1,-1,1812,1813,1814,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,2082,2083,2084,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1998,1999,2000,-1,-1,-1,-1,-1,-1,-1,1896,1897,1898,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,2166,2167,2168,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1980,1981,1982,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,2250,2251,2252,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1911,1912,1913],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2211,2212,2213,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1995,1996,1997],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2295,2296,2297,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2379,2380,2381,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2463,2464,2465,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2076,2078,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2244,2246,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1272,1273,1274,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1830,1831,1832,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1356,1357,1358,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1914,1915,1916,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1275,1276,1277,1440,1441,1442,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1998,1999,2000,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1359,1360,1361,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1443,1444,1445,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[2082,2083,2084,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[2166,2167,2168,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[2250,2251,2252,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1830,1831,1832,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,1998,1999,2000,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2076,2077,2078],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2160,2161,2162],[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2244,2245,2246]]}]}"
             }
           ],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 150,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Grayblunderbuss",
+          "persistentUuid": "bb4e0db7-7779-49e0-9ca2-0b28b446cf85",
+          "width": 150,
+          "x": 1130,
+          "y": 366,
+          "zOrder": 58,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 150,
+          "keepRatio": true,
+          "layer": "",
+          "name": "GrayCanon",
+          "persistentUuid": "bfc806b7-f2b7-487b-a609-9d0d3131bbbd",
+          "width": 150,
+          "x": 926,
+          "y": 366,
+          "zOrder": 59,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 150,
+          "keepRatio": true,
+          "layer": "",
+          "name": "GrayMusket",
+          "persistentUuid": "7542c9e0-6821-4029-816f-ac6ee1fe98ba",
+          "width": 150,
+          "x": 1130,
+          "y": 207,
+          "zOrder": 60,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "healthchange",
+          "persistentUuid": "e7fa1d78-93c5-4c03-8f4d-c9c6c3ea0ac8",
+          "width": 12,
+          "x": -30,
+          "y": 319,
+          "zOrder": 64,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1014,
+          "keepRatio": true,
+          "layer": "",
+          "name": "DeathBox",
+          "persistentUuid": "9c66ffb7-6dac-489c-a12d-f774600b6fbf",
+          "width": 32,
+          "x": -264,
+          "y": -115,
+          "zOrder": 65,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "DeathBox",
+          "persistentUuid": "41f26fdb-5d5f-41f6-b44f-0e2921d4fa5d",
+          "width": 1722,
+          "x": -307,
+          "y": 847,
+          "zOrder": 66,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 1077,
+          "keepRatio": true,
+          "layer": "",
+          "name": "DeathBox",
+          "persistentUuid": "c499bcdf-e6f8-4212-b254-de90fa15e6cb",
+          "width": 32,
+          "x": 1364,
+          "y": -142,
+          "zOrder": 67,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "",
+          "name": "DeathBox",
+          "persistentUuid": "333b5e01-046c-49a1-a2f9-6c1b6df1593f",
+          "width": 1715,
+          "x": -320,
+          "y": -119,
+          "zOrder": 68,
+          "numberProperties": [],
+          "stringProperties": [],
           "initialVariables": []
         }
       ],
@@ -3147,9 +3784,9 @@
             {
               "name": "Health",
               "type": "Health::Health",
-              "Health": 2,
+              "Health": 1,
               "CurrentHealth": 0,
-              "MaxHealth": 2,
+              "MaxHealth": 1,
               "DamageCooldown": 0,
               "AllowOverHealing": false,
               "IsHealthJustDamaged": false,
@@ -5194,7 +5831,7 @@
               "italic": false,
               "smoothed": true,
               "underlined": false,
-              "string": "GACHA",
+              "string": "Hire Pirates",
               "font": "",
               "textAlignment": "center",
               "characterSize": 20,
@@ -5217,7 +5854,7 @@
                 "shadowOpacity": 127,
                 "smoothed": true,
                 "underlined": false,
-                "text": "GACHA",
+                "text": "Hire Pirates",
                 "font": "",
                 "textAlignment": "center",
                 "verticalTextAlignment": "top",
@@ -5350,6 +5987,261 @@
             "tileSize": 8,
             "tilesWithHitBox": ""
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Grayblunderbuss",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "assets/GrayBlunderbuss",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/GrayBlunderbuss.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 10,
+                            "y": 11
+                          },
+                          {
+                            "x": 54,
+                            "y": 11
+                          },
+                          {
+                            "x": 54,
+                            "y": 57
+                          },
+                          {
+                            "x": 10,
+                            "y": 57
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GrayCanon",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 10,
+                            "y": 14
+                          },
+                          {
+                            "x": 57,
+                            "y": 14
+                          },
+                          {
+                            "x": 57,
+                            "y": 58
+                          },
+                          {
+                            "x": 10,
+                            "y": 58
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "GrayMusket",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "assets/GrayMusket",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets/GrayMusket.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 9
+                          },
+                          {
+                            "x": 55,
+                            "y": 9
+                          },
+                          {
+                            "x": 55,
+                            "y": 58
+                          },
+                          {
+                            "x": 7,
+                            "y": 58
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "healthchange",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "DeathBox",
+          "texture": "NewTiledSprite3",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -5357,6 +6249,9 @@
         "children": [
           {
             "objectName": "Skeleton"
+          },
+          {
+            "objectName": "healthchange"
           },
           {
             "objectName": "Pirate"
@@ -5428,6 +6323,9 @@
             "objectName": "Pirate_Tilemap_Base"
           },
           {
+            "objectName": "DeathBox"
+          },
+          {
             "objectName": "Menu"
           },
           {
@@ -5480,6 +6378,15 @@
           },
           {
             "objectName": "BlueButton2"
+          },
+          {
+            "objectName": "Grayblunderbuss"
+          },
+          {
+            "objectName": "GrayCanon"
+          },
+          {
+            "objectName": "GrayMusket"
           }
         ]
       },
@@ -5580,6 +6487,92 @@
                     "Opacity",
                     "=",
                     "200"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "ClimbVariable",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlayMusic"
+                  },
+                  "parameters": [
+                    "",
+                    "21. Pirate Seas (First Wave).mp3",
+                    "yes",
+                    "50",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "VariableChildCount(Save_AllObjects)/4",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "CreateByName"
+                      },
+                      "parameters": [
+                        "",
+                        "AllObjects",
+                        "Save_AllObjects[ClimbVariable]",
+                        "Save_AllObjects[ClimbVariable + 1]",
+                        "Save_AllObjects[ClimbVariable + 2]",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetWidth"
+                      },
+                      "parameters": [
+                        "AllObjects",
+                        "Resizable",
+                        "=",
+                        "150"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResizableCapability::ResizableBehavior::SetHeight"
+                      },
+                      "parameters": [
+                        "AllObjects",
+                        "Resizable",
+                        "=",
+                        "150"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetAngle"
+                      },
+                      "parameters": [
+                        "AllObjects",
+                        "=",
+                        "Save_AllObjects[ClimbVariable + 3]"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "ClimbVariable",
+                        "+",
+                        "4"
+                      ]
+                    }
                   ]
                 }
               ]
@@ -5982,6 +6975,17 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Spawning\"",
+                    ">=",
+                    "2"
+                  ]
                 }
               ],
               "actions": [
@@ -6142,7 +7146,7 @@
                     "",
                     "\"Spawning\"",
                     ">",
-                    "1"
+                    "SpawningTime"
                   ]
                 },
                 {
@@ -6551,6 +7555,27 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Gold",
+                    "+",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "GoldAmount",
+                    "Text",
+                    "=",
+                    "Gold"
+                  ]
                 }
               ]
             },
@@ -6591,6 +7616,27 @@
                     "",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Gold",
+                    "+",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "GoldAmount",
+                    "Text",
+                    "=",
+                    "Gold"
+                  ]
                 }
               ]
             },
@@ -6630,6 +7676,27 @@
                     "",
                     "",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Gold",
+                    "+",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "GoldAmount",
+                    "Text",
+                    "=",
+                    "Gold"
                   ]
                 }
               ]
@@ -6733,6 +7800,27 @@
                         "",
                         ""
                       ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Gold",
+                        "+",
+                        "2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "GoldAmount",
+                        "Text",
+                        "=",
+                        "Gold"
+                      ]
                     }
                   ]
                 }
@@ -6800,27 +7888,6 @@
                 },
                 {
                   "type": {
-                    "value": "SetNumberVariable"
-                  },
-                  "parameters": [
-                    "Gold",
-                    "+",
-                    "10"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-                  },
-                  "parameters": [
-                    "GoldAmount",
-                    "Text",
-                    "=",
-                    "Gold"
-                  ]
-                },
-                {
-                  "type": {
                     "value": "PlaySound"
                   },
                   "parameters": [
@@ -6841,6 +7908,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Pirate Target",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8394,6 +9462,7 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
+              "folded": true,
               "name": "Canon",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -8736,6 +9805,17 @@
                 "BlueButton2",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "CompareTimer"
+              },
+              "parameters": [
+                "",
+                "\"Spawning\"",
+                ">=",
+                "2"
+              ]
             }
           ],
           "actions": [
@@ -8768,13 +9848,1389 @@
                 "\"Gacha\"",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "ClearVariableChildren"
+              },
+              "parameters": [
+                "Save_AllObjects"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "AllObjects",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PushString"
+                  },
+                  "parameters": [
+                    "Save_AllObjects",
+                    "AllObjects.ObjectName()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushNumber"
+                  },
+                  "parameters": [
+                    "Save_AllObjects",
+                    "AllObjects.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushNumber"
+                  },
+                  "parameters": [
+                    "Save_AllObjects",
+                    "AllObjects.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PushNumber"
+                  },
+                  "parameters": [
+                    "Save_AllObjects",
+                    "AllObjects.Angle()"
+                  ]
+                }
+              ]
             }
           ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "BlunderOn",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Blunderbuss_Button",
+                "no",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "CanonOn",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Canon_Button",
+                "no",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "MusketOn",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Musketter_Button",
+                "no",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "BlunderOn",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Blunderbuss_Button",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Blunderbuss_Button",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Grayblunderbuss",
+                "Opacity",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "CanonOn",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Canon_Button",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Canon_Button",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "GrayCanon",
+                "Opacity",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "MusketOn",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Musketter_Button",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Musketter_Button",
+                "Opacity",
+                "=",
+                "255"
+              ]
+            },
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "GrayMusket",
+                "Opacity",
+                "=",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Pirate",
+                "",
+                "yes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::Circle"
+              },
+              "parameters": [
+                "Range",
+                "Pirate.X()",
+                "Pirate.Y()",
+                "100"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Canon",
+                "",
+                "yes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::Circle"
+              },
+              "parameters": [
+                "Range",
+                "Canon.X()",
+                "Canon.Y()",
+                "150"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Musketeer",
+                "",
+                "yes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::Circle"
+              },
+              "parameters": [
+                "Range",
+                "Musketeer.X()",
+                "Musketeer.Y()",
+                "500"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "BlunderBuss",
+                "",
+                "yes",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::Circle"
+              },
+              "parameters": [
+                "Range",
+                "BlunderBuss.X()",
+                "BlunderBuss.Y()",
+                "125"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Grayblunderbuss",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "BlunderOn",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "BlunderbussText",
+                "Text",
+                "=",
+                "\"Not Hired\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "GrayMusket",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "MusketOn",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "MusketeerText",
+                "Text",
+                "=",
+                "\"Not Hired\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "GrayCanon",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "CanonOn",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CanonText",
+                "Text",
+                "=",
+                "\"Not Hired\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Grayblunderbuss",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "BlunderbussText",
+                "Text",
+                "=",
+                "\"Blunderbuss\n175\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "GrayMusket",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "MusketeerText",
+                "Text",
+                "=",
+                "\"Musketeer\n200\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "GrayCanon",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CanonText",
+                "Text",
+                "=",
+                "\"Cannon\n225\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "PirateBullet",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "PirateBullet",
+                "DeathBox",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "PirateBullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "MusketeerBullet",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "MusketeerBullet",
+                "DeathBox",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "MusketeerBullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "CanonBomb",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "CanonBomb",
+                "DeathBox",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "CanonBomb",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "BlunderbussBullet",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "BlunderbussBullet",
+                "DeathBox",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "BlunderbussBullet",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Rounds",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "0.75"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "1",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "0",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "0.75"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "0.5"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "2",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    ">=",
+                    "7"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "<=",
+                    "8"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "0.75"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "2",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "9"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "0.5"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "3",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "2",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Round",
+                    "=",
+                    "10"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawningTime",
+                    "=",
+                    "0.5"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "healthchange",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::SetMaxHealthOp"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "=",
+                        "2",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Health::Health::Heal"
+                      },
+                      "parameters": [
+                        "Skeleton",
+                        "Health",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         }
       ],
       "layers": [
@@ -8932,7 +11388,7 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
-          "name": "Layer",
+          "name": "Trees and shit",
           "renderingType": "",
           "visibility": true,
           "cameras": [],
@@ -9059,7 +11515,13 @@
         "windowMask": false
       },
       "objectsGroups": [],
-      "variables": [],
+      "variables": [
+        {
+          "name": "Variable",
+          "type": "number",
+          "value": 0
+        }
+      ],
       "instances": [
         {
           "angle": 0,
@@ -9541,6 +12003,18 @@
                 "=",
                 "\"Closed\""
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "07. Howdy!.mp3",
+                "",
+                "50",
+                "1"
+              ]
             }
           ]
         },
@@ -9657,6 +12131,90 @@
                 "CurrentGemsText",
                 "=",
                 "420"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::Value"
+              },
+              "parameters": [
+                "NewTowerText",
+                "Text",
+                "=",
+                "\"You Got: Musketeer\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "MusketOn",
+                "True",
+                "="
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::Value"
+              },
+              "parameters": [
+                "NewTowerText",
+                "Text",
+                "=",
+                "\"You Got: Blunderbuss\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "BlunderOn",
+                "True",
+                "="
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::Value"
+              },
+              "parameters": [
+                "NewTowerText",
+                "Text",
+                "=",
+                "\"You Got: Cannon\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "CanonOn",
+                "True",
+                "="
               ]
             }
           ]
