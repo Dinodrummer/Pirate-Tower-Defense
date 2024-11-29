@@ -727,6 +727,69 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/1up/cf3d278e28f6f631da5883429db0f100b27b1e2ef94ad12cfedafbb1c5b61136_1up 9.aac",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "letter.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"letter.png\",\"extension\":\".png\"}",
+        "name": "letter.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "X.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"X.png\",\"extension\":\".png\",\"pskl\":{}}",
+        "name": "X.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite39.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite3",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewButton Idle.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewButton Idle",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewButton Hovered.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewButton Hovered",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewButton Pressed.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"pskl\":{}}",
+        "name": "NewButton Pressed",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite40.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite5",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1220,6 +1283,11 @@
       "name": "GClimbVariable",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "SceneStart",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -1243,7 +1311,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.24672586957406709,
+        "zoomFactor": 0.7370816317994181,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1266,417 +1334,6 @@
         }
       ],
       "variables": [
-        {
-          "name": "Queue",
-          "type": "array",
-          "children": []
-        },
-        {
-          "name": "Wave",
-          "type": "array",
-          "children": [
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 35
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 25
-            },
-            {
-              "type": "number",
-              "value": 30
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 25
-            },
-            {
-              "type": "number",
-              "value": 30
-            },
-            {
-              "type": "number",
-              "value": 30
-            },
-            {
-              "type": "number",
-              "value": 100
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 55
-            },
-            {
-              "type": "number",
-              "value": 35
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 45
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 80
-            },
-            {
-              "type": "number",
-              "value": 30
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 35
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 200
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 50
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 45
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 150
-            },
-            {
-              "type": "number",
-              "value": 80
-            },
-            {
-              "type": "number",
-              "value": 140
-            },
-            {
-              "type": "number",
-              "value": 25
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 35
-            },
-            {
-              "type": "number",
-              "value": 1
-            },
-            {
-              "type": "number",
-              "value": 180
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 50
-            },
-            {
-              "type": "number",
-              "value": 150
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 12
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 100
-            },
-            {
-              "type": "number",
-              "value": 2
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 35
-            },
-            {
-              "type": "number",
-              "value": 3
-            },
-            {
-              "type": "number",
-              "value": 35
-            },
-            {
-              "type": "number",
-              "value": 45
-            },
-            {
-              "type": "number",
-              "value": 40
-            },
-            {
-              "type": "number",
-              "value": 4
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 100
-            },
-            {
-              "type": "number",
-              "value": 1
-            },
-            {
-              "type": "number",
-              "value": 150
-            },
-            {
-              "type": "number",
-              "value": 7
-            },
-            {
-              "type": "number",
-              "value": 100
-            },
-            {
-              "type": "number",
-              "value": 9
-            },
-            {
-              "type": "number",
-              "value": 2
-            },
-            {
-              "type": "number",
-              "value": 11
-            },
-            {
-              "type": "number",
-              "value": 8
-            },
-            {
-              "type": "number",
-              "value": 2
-            },
-            {
-              "type": "number",
-              "value": 69
-            },
-            {
-              "type": "number",
-              "value": 200
-            },
-            {
-              "type": "number",
-              "value": 80
-            },
-            {
-              "type": "number",
-              "value": 3
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 150
-            },
-            {
-              "type": "number",
-              "value": 7
-            },
-            {
-              "type": "number",
-              "value": 60
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 300
-            },
-            {
-              "type": "number",
-              "value": 500
-            },
-            {
-              "type": "number",
-              "value": 1
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 30
-            },
-            {
-              "type": "number",
-              "value": 50
-            },
-            {
-              "type": "number",
-              "value": 2
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 4
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 15
-            },
-            {
-              "type": "number",
-              "value": 1000
-            },
-            {
-              "type": "number",
-              "value": 20
-            },
-            {
-              "type": "number",
-              "value": 5
-            },
-            {
-              "type": "number",
-              "value": 10
-            },
-            {
-              "type": "number",
-              "value": 6
-            },
-            {
-              "type": "number",
-              "value": 500
-            },
-            {
-              "type": "number",
-              "value": 30
-            },
-            {
-              "type": "number",
-              "value": 2
-            },
-            {
-              "type": "number",
-              "value": 8
-            },
-            {
-              "type": "number",
-              "value": 100
-            },
-            {
-              "type": "number",
-              "value": 1
-            }
-          ]
-        },
         {
           "name": "ClimbVariable",
           "type": "number",
@@ -2492,7 +2149,7 @@
           "width": 143,
           "x": 960,
           "y": 128,
-          "zOrder": 28,
+          "zOrder": 52,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2509,7 +2166,7 @@
           "width": 224,
           "x": 1024,
           "y": 128,
-          "zOrder": 29,
+          "zOrder": 53,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2526,7 +2183,7 @@
           "width": 96,
           "x": 960,
           "y": 192,
-          "zOrder": 30,
+          "zOrder": 54,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2543,7 +2200,7 @@
           "width": 224,
           "x": 1024,
           "y": 192,
-          "zOrder": 31,
+          "zOrder": 55,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2560,7 +2217,7 @@
           "width": 97,
           "x": 960,
           "y": 64,
-          "zOrder": 32,
+          "zOrder": 50,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2577,7 +2234,7 @@
           "width": 222,
           "x": 1024,
           "y": 64,
-          "zOrder": 33,
+          "zOrder": 51,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2588,13 +2245,13 @@
           "depth": 1,
           "height": 768,
           "keepRatio": true,
-          "layer": "Path",
+          "layer": "UI",
           "name": "Menu",
           "persistentUuid": "e9a22b0d-2eda-4380-9930-1db2d1958a75",
           "width": 384,
           "x": 928,
           "y": -27,
-          "zOrder": 34,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2604,13 +2261,13 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "Pirate_Button",
           "persistentUuid": "4610c35f-b6cd-4344-a838-68af835b5244",
           "width": 0,
           "x": 926,
           "y": 207,
-          "zOrder": 35,
+          "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2653,13 +2310,13 @@
           "customSize": true,
           "depth": 1.8749999999999998,
           "height": 90,
-          "layer": "",
+          "layer": "UI",
           "name": "PirateText",
           "persistentUuid": "f6ad4fb2-9f16-4c56-8a3d-59ad2ee1bdf8",
           "width": 150,
           "x": 926,
           "y": 369,
-          "zOrder": 38,
+          "zOrder": 60,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2669,13 +2326,13 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "Musketter_Button",
           "persistentUuid": "31df6657-6440-4850-a183-ea50c827d90e",
           "width": 0,
           "x": 1130,
           "y": 207,
-          "zOrder": 39,
+          "zOrder": 41,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2702,7 +2359,7 @@
           "customSize": true,
           "depth": 0,
           "height": 90,
-          "layer": "",
+          "layer": "UI",
           "name": "MusketeerText",
           "persistentUuid": "5adff9c0-b9b0-45bc-a11d-10d7cfd6c4fe",
           "width": 150,
@@ -2735,14 +2392,14 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "Blunderbuss_Button",
           "opacity": 0,
           "persistentUuid": "94a16717-f15e-47a4-b4a1-bf6069146ff9",
           "width": 0,
           "x": 1130,
           "y": 366,
-          "zOrder": 43,
+          "zOrder": 47,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2752,7 +2409,7 @@
           "customSize": true,
           "depth": 0,
           "height": 90,
-          "layer": "",
+          "layer": "UI",
           "name": "BlunderbussText",
           "persistentUuid": "9bdb2ae3-671e-40b1-8cdc-16e0e181d6a7",
           "width": 150,
@@ -2768,7 +2425,7 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "Canon_Button",
           "opacity": 0,
           "persistentUuid": "b030ad7c-9733-4a69-8104-b312dcb7dc62",
@@ -2785,7 +2442,7 @@
           "customSize": true,
           "depth": 0,
           "height": 90,
-          "layer": "",
+          "layer": "UI",
           "name": "CanonText",
           "persistentUuid": "2bb8acf2-528d-4c8f-9a00-7a2669a0dbe5",
           "width": 150,
@@ -3087,13 +2744,13 @@
           "depth": 0,
           "height": 150,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "Grayblunderbuss",
           "persistentUuid": "bb4e0db7-7779-49e0-9ca2-0b28b446cf85",
           "width": 150,
-          "x": 1130,
+          "x": 1131,
           "y": 366,
-          "zOrder": 58,
+          "zOrder": 48,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3104,13 +2761,13 @@
           "depth": 0,
           "height": 150,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "GrayCanon",
           "persistentUuid": "bfc806b7-f2b7-487b-a609-9d0d3131bbbd",
           "width": 150,
-          "x": 926,
+          "x": 924,
           "y": 366,
-          "zOrder": 59,
+          "zOrder": 46,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3121,13 +2778,13 @@
           "depth": 0,
           "height": 150,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "GrayMusket",
           "persistentUuid": "7542c9e0-6821-4029-816f-ac6ee1fe98ba",
           "width": 150,
           "x": 1130,
           "y": 207,
-          "zOrder": 60,
+          "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3213,6 +2870,107 @@
           "x": -320,
           "y": -119,
           "zOrder": 68,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 600,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "Letter",
+          "persistentUuid": "ebf39a59-d033-4ddd-a708-396799c4be69",
+          "width": 511.7647058823529,
+          "x": 279,
+          "y": 46,
+          "zOrder": 103,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 240,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "LetterText",
+          "persistentUuid": "2d0b7f6f-9527-48b2-86d0-f85c7355c836",
+          "width": 235,
+          "x": 426,
+          "y": 203,
+          "zOrder": 105,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 112.49999999999999,
+          "height": 75,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "LetterX",
+          "persistentUuid": "691a69d4-453b-406b-8bfe-6221b56143b5",
+          "width": 75,
+          "x": 515,
+          "y": 497,
+          "zOrder": 104,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 957,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "StartingBlocker",
+          "opacity": 128,
+          "persistentUuid": "57f48d41-8e2e-4f7b-bc81-656191e9f420",
+          "width": 1628,
+          "x": -250,
+          "y": -102,
+          "zOrder": 100,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText",
+          "persistentUuid": "ac8172ca-fa16-4917-a9a8-32c7a6659b9a",
+          "width": 0,
+          "x": 6,
+          "y": 389,
+          "zOrder": 106,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText2",
+          "persistentUuid": "95e99580-685c-4be3-883f-b2ea218a3f9b",
+          "width": 0,
+          "x": 439,
+          "y": 7,
+          "zOrder": 107,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7265,6 +7023,344 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Letter",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "letter",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "letter.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 2
+                          },
+                          {
+                            "x": 347,
+                            "y": 2
+                          },
+                          {
+                            "x": 347,
+                            "y": 408
+                          },
+                          {
+                            "x": 1,
+                            "y": 408
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "LetterText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Skeletons are invading to take yer gold!\nHire pirates and place your crew to defend!\nYou can hire new pirates inbetween rounds.\nPlace with left click and deselect with right click.",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Skeletons are invading to take yer gold!\nHire pirates and place your crew to defend!\nYou can hire new pirates inbetween rounds.\nPlace with left click and deselect with right click.",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "LetterX",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Black",
+              "doubleParameters": {
+                "padding": 5,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "31;32;37"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "content": {},
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "X.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "X.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "",
+              "font": "",
+              "textAlignment": "",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "",
+                "font": "",
+                "textAlignment": "",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "X.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            }
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "StartingBlocker",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite5",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Entrance",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Entrance",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Exit",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Exit",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -7349,6 +7445,9 @@
             "objectName": "DeathBox"
           },
           {
+            "objectName": "LetterX"
+          },
+          {
             "objectName": "Menu"
           },
           {
@@ -7410,6 +7509,21 @@
           },
           {
             "objectName": "GrayMusket"
+          },
+          {
+            "objectName": "Letter"
+          },
+          {
+            "objectName": "LetterText"
+          },
+          {
+            "objectName": "NewText"
+          },
+          {
+            "objectName": "StartingBlocker"
+          },
+          {
+            "objectName": "NewText2"
           }
         ]
       },
@@ -7968,7 +8082,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Skeleton Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -8011,6 +8124,16 @@
                     "\"Spawning\"",
                     ">",
                     "2.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "SceneStart",
+                    "True",
+                    ""
                   ]
                 }
               ],
@@ -8133,6 +8256,16 @@
                     ">",
                     "2.5"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "SceneStart",
+                    "True",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -8143,7 +8276,17 @@
                   "parameters": [
                     "Gems",
                     "+",
-                    "((Round - 1) * 5) + 20"
+                    "25"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Gold",
+                    "+",
+                    "100 + Round"
                   ]
                 }
               ]
@@ -8600,7 +8743,7 @@
                   "parameters": [
                     "Gold",
                     "+",
-                    "2"
+                    "1"
                   ]
                 },
                 {
@@ -8661,7 +8804,7 @@
                   "parameters": [
                     "Gold",
                     "+",
-                    "2"
+                    "1"
                   ]
                 },
                 {
@@ -8722,7 +8865,7 @@
                   "parameters": [
                     "Gold",
                     "+",
-                    "2"
+                    "1"
                   ]
                 },
                 {
@@ -8845,7 +8988,7 @@
                       "parameters": [
                         "Gold",
                         "+",
-                        "2"
+                        "1"
                       ]
                     },
                     {
@@ -9522,7 +9665,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Deselect/Buy",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -9532,7 +9674,6 @@
               "colorG": 176,
               "colorR": 74,
               "creationTime": 0,
-              "folded": true,
               "name": "Pirate",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
@@ -19197,6 +19338,267 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "SceneStart",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "BlueButton",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "BlueButton2",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "NextWaveButton",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Pirate_Button",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Musketter_Button",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Blunderbuss_Button",
+                "no",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Canon_Button",
+                "no",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "SceneStart",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "BlueButton",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "BlueButton2",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "NextWaveButton",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+              },
+              "parameters": [
+                "Pirate_Button",
+                "yes",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Letter",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "LetterText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "LetterX",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "StartingBlocker",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+              },
+              "parameters": [
+                "LetterX",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "SceneStart",
+                "True",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+              },
+              "parameters": [
+                "LetterX",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "LetterX",
+                "Effect",
+                "\"Black\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+              },
+              "parameters": [
+                "LetterX",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "LetterX",
+                "Effect",
+                "\"Black\"",
+                "yes"
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -19477,7 +19879,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7619362677197598,
+        "zoomFactor": 0.301046119718246,
         "windowMask": false
       },
       "objectsGroups": [],
