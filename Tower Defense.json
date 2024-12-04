@@ -790,6 +790,84 @@
         "name": "NewSprite5",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Gameover copy.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Gameover copy.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "youwin.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "youwin.jpg",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "bacgkground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bacgkground.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/NewSprite41.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite41.png\"}",
+        "name": "NewSprite7",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/34 - dad got me a new nes game but it sucks.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "73942066fd4e1d3f4f9685210cb236514bfa5c0459f437ea7f76c6eccf5a0d9c_34 - dad got me a new nes game but it sucks.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Ragnar Random/Fakebit Chiptune Music/73942066fd4e1d3f4f9685210cb236514bfa5c0459f437ea7f76c6eccf5a0d9c_34 - dad got me a new nes game but it sucks.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Land of Pirates.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "97acd74005413b4d938c885c54ad6d10fdaf5e3869bb8016b2f1117ee07dc29e_Land of Pirates.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Music/Fantasy/97acd74005413b4d938c885c54ad6d10fdaf5e3869bb8016b2f1117ee07dc29e_Land of Pirates.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Comic Game Loop - Mischief.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "226c49a40b52068e2f1a80bbcc6ef6461bda024dc981db0d4d018223f75e2bc9_Comic Game Loop - Mischief.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Music/Comedy/226c49a40b52068e2f1a80bbcc6ef6461bda024dc981db0d4d018223f75e2bc9_Comic Game Loop - Mischief.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -1311,7 +1389,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7370816317994181,
+        "zoomFactor": 0.36732575450588956,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7096,7 +7174,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Skeletons are invading to take yer gold!\nHire pirates and place your crew to defend!\nYou can hire new pirates inbetween rounds.\nPlace with left click and deselect with right click.",
+          "string": "Skeletons are invading to take yer gold!\nHire pirates and place your crew to defend!\nYou can hire new pirates inbetween rounds.\nPlace with left click and deselect with right click.\nTry to get past all 100 rounds",
           "font": "",
           "textAlignment": "center",
           "characterSize": 20,
@@ -7119,7 +7197,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Skeletons are invading to take yer gold!\nHire pirates and place your crew to defend!\nYou can hire new pirates inbetween rounds.\nPlace with left click and deselect with right click.",
+            "text": "Skeletons are invading to take yer gold!\nHire pirates and place your crew to defend!\nYou can hire new pirates inbetween rounds.\nPlace with left click and deselect with right click.\nTry to get past all 100 rounds",
             "font": "",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -8276,7 +8354,7 @@
                   "parameters": [
                     "Gems",
                     "+",
-                    "25"
+                    "100"
                   ]
                 },
                 {
@@ -19599,6 +19677,60 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Health",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"GameOver\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Round",
+                ">",
+                "100"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Win\"",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -20595,6 +20727,1287 @@
                 "CanonOn",
                 "True",
                 "="
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
+    },
+    {
+      "b": 0,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "GameOver",
+      "name": "GameOver",
+      "r": 0,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 0,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.37971210019479323,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Credits",
+          "persistentUuid": "51379009-1f3a-4f14-9f6d-a9a587217feb",
+          "width": 0,
+          "x": 1006,
+          "y": 13,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 387.78625954198475,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "d01200b2-c656-45df-85bc-692074d80713",
+          "width": 400,
+          "x": 640,
+          "y": 360,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "90d94b6e3a23c34948e59eaaef4679740f8ab588696d59b21e0c0c2ef106b94d",
+          "name": "Credits",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Hovered.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Idle.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Credits",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 99,
+                "g": 69,
+                "r": 28
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Credits",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "28;69;99"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Pressed.png",
+              "tiled": true,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Gameover copy.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 131,
+                        "y": 127
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 262,
+                            "y": 0
+                          },
+                          {
+                            "x": 262,
+                            "y": 254
+                          },
+                          {
+                            "x": 0,
+                            "y": 254
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Credits"
+          },
+          {
+            "objectName": "NewSprite"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+              },
+              "parameters": [
+                "Credits",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Credits\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "73942066fd4e1d3f4f9685210cb236514bfa5c0459f437ea7f76c6eccf5a0d9c_34 - dad got me a new nes game but it sucks.aac",
+                "yes",
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Win",
+      "name": "Win",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.27253598967729314,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 725.6692913385825,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Youwin",
+          "persistentUuid": "212da40b-dc91-496c-9a0a-1e4a6d16509e",
+          "width": 1280,
+          "x": 640,
+          "y": 359,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Credits",
+          "persistentUuid": "3184e8d2-120d-44dc-9df6-34999cf10918",
+          "width": 0,
+          "x": 1008,
+          "y": 17,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Youwin",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "youwin.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 317.5,
+                        "y": 180
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 635,
+                            "y": 0
+                          },
+                          {
+                            "x": 635,
+                            "y": 360
+                          },
+                          {
+                            "x": 0,
+                            "y": 360
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "90d94b6e3a23c34948e59eaaef4679740f8ab588696d59b21e0c0c2ef106b94d",
+          "name": "Credits",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "LeftPadding": 16,
+            "RightPadding": 16,
+            "PressedLabelOffsetY": 10,
+            "BottomPadding": 32,
+            "TopPadding": 16,
+            "HoveredFadeOutDuration": 0.25
+          },
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Hovered.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Idle": {
+              "bottomMargin": 32,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Idle.png",
+              "tiled": true,
+              "topMargin": 16,
+              "width": 256
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Credits",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 60,
+              "color": {
+                "b": 99,
+                "g": 69,
+                "r": 28
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Credits",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 60,
+                "color": "28;69;99"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 16,
+              "height": 106,
+              "leftMargin": 16,
+              "rightMargin": 16,
+              "texture": "Blue Button_Pressed.png",
+              "tiled": true,
+              "topMargin": 32,
+              "width": 256
+            }
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "Youwin"
+          },
+          {
+            "objectName": "Credits"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+              },
+              "parameters": [
+                "Credits",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Credits\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "97acd74005413b4d938c885c54ad6d10fdaf5e3869bb8016b2f1117ee07dc29e_Land of Pirates.aac",
+                "yes",
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Credits",
+      "name": "Credits",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.3797121001947931,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 720.8823529411766,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "f346951a-c550-4acf-b667-5953b5886e0c",
+          "width": 1290,
+          "x": 640,
+          "y": 360,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText",
+          "persistentUuid": "3cf5e19d-6ea9-467d-bc4b-caf67cd1ba73",
+          "width": 0,
+          "x": 401,
+          "y": 359,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText2",
+          "persistentUuid": "db55fb54-a26b-4c41-89ef-360f8902726b",
+          "width": 0,
+          "x": 462,
+          "y": 14,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText3",
+          "persistentUuid": "65af2fc4-6e3c-469a-b680-c0197ded5a4f",
+          "width": 0,
+          "x": 448,
+          "y": 449,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewText4",
+          "persistentUuid": "ccd569d0-1c09-4df1-8a0b-cf1dcc080722",
+          "width": 0,
+          "x": 460,
+          "y": 496,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 293,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "opacity": 128,
+          "persistentUuid": "203bc524-4946-4c9d-bd7f-a2eb27b47616",
+          "width": 507,
+          "x": 393,
+          "y": 331,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "bacgkground.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 544,
+                        "y": 304
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1088,
+                            "y": 0
+                          },
+                          {
+                            "x": 1088,
+                            "y": 608
+                          },
+                          {
+                            "x": 0,
+                            "y": 608
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Mechanics: Aiden Le,\n JT Gruber, Matthew Peters",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Mechanics: Aiden Le,\n JT Gruber, Matthew Peters",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Booty Impact",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Booty Impact",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText3",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Art: Aiden Le & Google",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Art: Aiden Le & Google",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText4",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Music: Undertale &\nPlants vs Zombies 2",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Music: Undertale &\nPlants vs Zombies 2",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "NewText5",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Text",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite7",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "NewSprite"
+          },
+          {
+            "objectName": "NewText2"
+          },
+          {
+            "objectName": "NewText5"
+          },
+          {
+            "objectName": "NewText"
+          },
+          {
+            "objectName": "NewText3"
+          },
+          {
+            "objectName": "NewText4"
+          },
+          {
+            "objectName": "NewSprite2"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "226c49a40b52068e2f1a80bbcc6ef6461bda024dc981db0d4d018223f75e2bc9_Comic Game Loop - Mischief.aac",
+                "yes",
+                "",
+                ""
               ]
             }
           ]
